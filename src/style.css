@@ -10,7 +10,10 @@ body {
     font-style: normal;
     background-color: var(--bg);
     color: var(--fg);
-    margin: 80px;
+}
+
+.container {
+    margin: 5vw 10vw;
 }
 
 h1 {
@@ -32,6 +35,14 @@ h3 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .flexbox {
@@ -60,18 +71,15 @@ a {
 .info {
     /* border-bottom: 1px solid white; */
     /* padding: 20px; */
-    margin-top: 30px;
+    margin-top: 100px;
     border-top: var(--fg) solid 1px;
     border-bottom: var(--fg) solid 1px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    text-shadow: 0 0 2px rgb(18, 18, 17), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg);
 }
 
 a:hover {
     color: var(--primary);
-}
-
-.hero {
-    /* box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 14px #fff, 0 0 18px #fff, 0 0 22px #fff, 0 0 30px #fff; */
 }
 
 .footer {
@@ -97,11 +105,56 @@ hr {
     text-underline-offset: 5px;
 }
 
+.webgl {
+    position: absolute;
+    width: 100vw;
+    /* background-color: blue; */
+    margin: -8px;
+    z-index: -100;
+}
+
+.project-preview {
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+.project-preview img {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    height: auto;
+}
+
+.project-hero {
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-preview:hover {
+    color: var(--primary);
+}
+
+.project-preview:hover .project-hero {
+    color: var(--primary);
+    box-shadow: 0 0 2px var(--primary), 0 0 4px var(--primary), 0 0 6px var(--primary), 0 0 8px var(--primary), 0 0 10px var(--primary);
+}
+
+.project-preview-description {
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .big-link {
-        text-decoration: underline wavy 3px var(--primary);
+        /* text-decoration: underline wavy 3px var(--primary); */
+        text-decoration: underline solid 3px var(--fg);
         text-underline-offset: 5px;
+    }
+
+    .big-link:hover {
+        text-decoration: underline solid 3px var(--primary);
     }
 
     .flexbox {
@@ -118,3 +171,4 @@ hr {
         margin: 0px;
     }
 }
+
