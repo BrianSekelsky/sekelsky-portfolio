@@ -1,0 +1,71 @@
+body {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #07020D;
+    color: white;
+    margin: 50px;
+}
+
+h1 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+h2 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: start;
+    padding: 20px;
+}
+
+.column {
+    display: flex;
+    justify-content: start;
+    width: 50vw;
+}
+
+.nav-link {
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.info {
+    /* border-bottom: 1px solid white; */
+    /* padding: 20px; */
+}
+
+.big-link {
+    text-decoration: underline wavy 3px #23CE6B;
+}
+
+a:hover {
+    color: #23CE6B;
+}
+
+.right-align {
+    justify-content: end;
+}
+
+.hero {
+    /* box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 14px #fff, 0 0 18px #fff, 0 0 22px #fff, 0 0 30px #fff; */
+}
