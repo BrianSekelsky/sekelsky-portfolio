@@ -44,7 +44,7 @@ const particlesMaterial = new THREE.PointsMaterial({
     // color: '#05F140',
     // color: '#0000ff',
     sizeAttenuation: textureLoader,
-    size: 0.15
+    size: 0.2
 })
 
 // Points
