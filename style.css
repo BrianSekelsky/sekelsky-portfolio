@@ -16,13 +16,18 @@ body {
     color: var(--fg);
 }
 
+p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
 .container {
     margin: 5vw 10vw;
 }
 
 h1 {
     font-family: "proxima-nova", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     /* font-size: 4rem; */
     font-size: 4.4vw;
@@ -31,19 +36,25 @@ h1 {
 
 h2 {
     font-family: "proxima-nova", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 h3 {
+    font-size: 1.2em;
     font-family: "proxima-nova", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 h4 {
+    font-size: 1.2em;
     font-weight: 100;
     margin-top: 0;
     margin-bottom: 0;
@@ -53,6 +64,7 @@ h4 {
     font-family: "dapifer", serif;
     font-weight: 300;
     font-style: italic;
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
 .flexbox {
@@ -70,6 +82,7 @@ h4 {
 .nav-link {
     padding-right: 20px;
     margin: 20px 0px 20px 0px;
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
 a {
@@ -86,6 +99,23 @@ a {
     border-bottom: var(--fg) solid 1px;
     margin-bottom: 100px;
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
+}
+
+.project-info {
+    margin-top: 100px;
+    border-top: var(--fg) solid 1px;
+    margin-bottom: 50px;
+}
+
+.project-process {
+    margin-top: 100px;
+    border-top: var(--fg) solid 1px;
+    border-bottom: var(--fg) solid 1px;
+    margin-bottom: 100px;
+}
+
+.about-info {
+    margin-bottom: 40px;
 }
 
 a:hover {
@@ -155,6 +185,69 @@ hr {
     transition: all 0.2s ease-in-out;
 }
 
+.rounded-image {
+    border-radius: 15px;
+}
+
+.profile {
+    width: 400px;
+}
+
+.project-description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 100px;
+    border-top: var(--fg) solid 1px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+}
+
+.third {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.two-thirds {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.img-fill {
+    width: 100%;
+}
+
+/* Art Gallery */
+.gallery {
+    margin-top: 100px;
+    padding-top: 100px;
+    border-top: var(--fg) solid 1px;
+    margin-bottom: 100px;
+    line-height:0;
+    -webkit-column-count:2;
+    -webkit-column-gap:10px;
+    -moz-column-count:2;
+    -moz-column-gap:10px;
+    column-count:2;
+    column-gap:10px;
+}
+
+.gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px;
+}
+
+.img-caption {
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: gray;
+    font-weight: 100;
+    font-style: italic;
+    /* text-align: right; */
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .big-link {
@@ -175,10 +268,26 @@ hr {
         justify-content: end;
     }
 
+    .third {
+        padding: 0px 0px;
+        width: 33%;
+    }
+    
+    .two-thirds {
+        padding: 0px 50px;
+        width: 66%;
+    }
+
     .nav-link {
         padding-left: 20px;
         padding-right: 0px;
         margin: 0px;
+    }
+
+    .gallery {
+        -moz-column-count:    3;
+        -webkit-column-count: 3;
+        column-count:         3;
     }
 }
 

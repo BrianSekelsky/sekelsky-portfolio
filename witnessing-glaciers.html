@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brian Sekelsky</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vwk6fyq.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+        <div class="flexbox">
+            <div class="column">
+                <a class="brian-link name" href="index.html">Brian Sekelsky</a>
+            </div>
+            <div class="column right-align">
+                <a class="nav-link" href="index.html#work">Work</a>
+                <a class="nav-link" href="art.html">Art</a>
+                <!-- <a class="nav-link" href="#">Sounds</a> -->
+                <a class="nav-link" href="about.html">About</a>
+            </div>
+        </div>
+
+        <div class="flexbox project-description">
+            <div class="third">
+                <h2 class="no-margin">Wintessing Glaciers</h2>
+            </div>
+            <div class="third">
+                <h3>Tools</h3>
+                <h4>ThreeJS</h4>
+                <h4>Javascript</h4>
+                <h4>HTML/CSS</h4>
+                <h4>ArcGIS</h4>
+                <h4>Processing</h4>
+                <h4>Figma</h4>
+                <h4>Miro</h4>
+                <h4>Ableton</h4>
+            </div>
+            <div class="third">
+                <h3>Task</h3>
+                <h4>Web design + development</h4>
+                <br>
+                <h3>Objective</h3>
+                <h4>Translate climate related news content into a visual form that lends itself to the data.</h4>
+            </div>
+        </div>
+
+        <div class="flexbox project-info">
+            <h2>
+                During a workshop with <a class="big-link" href="https://scottreinhard.com/">Scott Reinhard (Graphics Editor at The New York Times)</a>, I explored data visualization related to climate change and glaciers.
+
+                The final prototype is a website which features a globe populated by all of the world’s glaciers, designated by white specks. A few key glaciers have been identified and marked with larger sphere which turn red as the user scrolls and reads their corresponding text.
+                
+                All of the data comes from the <a class="big-link" href="https://wgms.ch/">World Glacier Monitoring Service</a>. Using javascript and ThreeJS I was able to place all of the glaciers on this model of Earth.
+
+            </h2>
+        </div>
+
+        <div class="flexbox">
+            <video class="project-hero" width="100%" autoplay>
+                <source src="media/witnessing_glaciers.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="project-process">
+            <div class="flexbox">
+                <h2>Process</h2>
+            </div>
+            <div class="flexbox">
+                <div class="third">
+                    <p>Starting with an investigation of current climate change issues, I came across several stories about melting ice caps. I was originally interested in the Alps in Italy. But later broadened my scope.</p>
+                </div>
+                <div class="two-thirds">
+                    <img class="img-fill" src="media/italian-alps.png" />
+                    <p class="img-caption">Collecting research in Figma</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="third">
+                    <p>This eventually led me to glaciers, which have been changing size at alarming rates. I started out by sketching in Processing, using GPS coordinates and glacial masses from WGMS’s Fluctuations of Glaciers Databases. The simple sketch shows the world’s glaciers in their relative positions, their color fades from white to black in accordane with their mass. As years pass, the glaciers fade.</p>
+                </div>
+                <div class="two-thirds">
+                    <img class="img-fill" src="media/world.gif" />
+                    <p class="img-caption">Processing Sketch</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Art -->
+        <div class="gallery">
+  
+            <img src="media/art/1.gif">
+            <img src="media/art/2.png">
+            <img src="media/art/3.png">
+            <img src="media/art/4.png">
+            <img src="media/art/5.gif">
+            <img src="media/art/6.png">
+            <img src="media/art/7.png">
+            <img src="media/art/8.jpeg">
+            <img src="media/art/9.png">
+            <img src="media/art/10.png">
+            <img src="media/art/11.png">
+            <img src="media/art/12.png">
+            <img src="media/art/13.jpeg">
+            <img src="media/art/14.png">
+
+        </div>
+        
+
+        <!-- Footer -->
+        <div class="flexbox footer">
+            <div class="column">© 2023 Brian Sekelsky</div>
+            <div class="column right-align">
+                <a class="nav-link" href="https://twitter.com/winter_foe">twitter</a>
+                <a class="nav-link" href="https://www.instagram.com/briansekelsky/">instagram</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/brian-sekelsky-467776a7/">linkedin</a>
+                <a class="nav-link" href="https://open.spotify.com/artist/4GYawQUhnxYepBC7WhUJ4N">spotify</a>
+                <a class="nav-link" href="https://www.youtube.com/channel/UCiHaEMWLCmFCeUkskrNeObQ">youtube</a>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="js/three.js"></script>
+  <script src="src/script.js"></script>
+</html>
