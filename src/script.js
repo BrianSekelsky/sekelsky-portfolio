@@ -1,6 +1,3 @@
-import './style.css'
-import * as THREE from 'three'
-
 const scene = new THREE.Scene()
 
 const geometry = new THREE.BoxGeometry(1, 1, 1)
@@ -9,7 +6,7 @@ const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
 const camera = new THREE.PerspectiveCamera(70, 2, 1, 1000);
-camera.position.z = 10
+camera.position.z = 20
 scene.add(camera)
 
 const canvas = document.querySelector('.webgl')
@@ -18,6 +15,8 @@ const renderer = new THREE.WebGLRenderer({
 })
 
 renderer.render(scene, camera)
+
+scene.background = new THREE.Color( 0xffffff );
 
 /**
  * Particles
@@ -41,9 +40,11 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    color: '#f0f0f0',
+    color: '#00A5E0',
+    // color: '#05F140',
+    // color: '#0000ff',
     sizeAttenuation: textureLoader,
-    size: 0.1
+    size: 0.2
 })
 
 // Points
