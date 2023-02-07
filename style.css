@@ -273,6 +273,11 @@ hr {
     column-gap:10px;
 }
 
+.no-top-border {
+    border-top: 0;
+    margin-top: 0;
+}
+
 .gallery img {
     width: 100% !important;
     height: auto !important;
