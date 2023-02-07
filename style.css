@@ -188,6 +188,7 @@ hr {
     /* background-color: blue; */
     margin: -8px;
     z-index: -100;
+    margin-top: -72px;
 }
 
 .project-preview {
@@ -367,6 +368,7 @@ hr {
         text-align: center;
         padding-right: 20px;
         margin-left: 20px;
+        background-color: white;
     }
 
     .special:hover {
