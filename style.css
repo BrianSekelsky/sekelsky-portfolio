@@ -4,9 +4,16 @@
     /* --primary: #23CE6B; */
     /* --bg: #ffffff; */
     /* --fg: #07020D; */
-    --primary: #0000ff;
+    /* --primary: #0000ff; */
+    --primary: #04F06A;
+    /* --primary: #35A7FF; */
     --secondary: #05F140;
   }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body {
     font-family: "proxima-nova", sans-serif;
@@ -101,6 +108,7 @@ h4 {
     display: flex;
     justify-content: start;
     width: 50vw;
+    flex-wrap: wrap;
 }
 
 .nav-link {

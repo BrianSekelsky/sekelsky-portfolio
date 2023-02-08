@@ -17,6 +17,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
+scene.background = new THREE.Color( 0x07020D );
 scene.fog = new THREE.Fog( 0xffffff, 0.95, 100 ); 
 
 /**
