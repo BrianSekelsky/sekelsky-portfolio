@@ -42,6 +42,11 @@ a:hover {
     margin: 5vw 10vw;
 }
 
+.nav {
+    border-bottom: 1px solid var(--fg);
+    padding-bottom: 20px;
+}
+
 h1 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 500;
@@ -126,8 +131,8 @@ h4 {
     /* border-bottom: 1px solid white; */
     /* padding: 20px; */
     margin-top: 20px;
-    border-top: var(--fg) solid 1px;
-    border-bottom: var(--fg) solid 1px;
+    /* border-top: var(--fg) solid 1px; */
+    /* border-bottom: var(--fg) solid 1px; */
     margin-bottom: 40px;
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
@@ -171,17 +176,18 @@ hr {
 }
 
 .big-link {
-    text-decoration: underline wavy 1px var(--primary);
+    text-decoration: underline solid 2px var(--primary);
     text-underline-offset: 5px;
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-color: var(--fg);
-    -webkit-text-decoration-style: wavy;
+    -webkit-text-decoration-style: solid;
     -webkit-text-decoration-thickness: 2px;
-    -webkit-text-decoration-offset: 5px;
+    -webkit-text-decoration-offset: 7px;
+    transition: all 0.3 ease-in-out;
 }
 
 .small-link {
-    text-decoration: underline wavy 0.06em var(--fg);
+    text-decoration: underline solid 0.06em var(--fg);
     text-underline-offset: 5px;
 }
 
@@ -329,7 +335,7 @@ hr {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .info {
-        margin-top: 100px;
+        margin-top: 40px;
         margin-bottom: 100px;
     }
 
@@ -339,12 +345,12 @@ hr {
 
     .big-link {
         /* text-decoration: underline wavy 3px var(--primary); */
-        text-decoration: underline wavy 2px var(--fg);
+        text-decoration: underline solid 2px var(--fg);
         -webkit-text-decoration-line: underline;
         -webkit-text-decoration-color: var(--fg);
-        -webkit-text-decoration-style: wavy;
+        -webkit-text-decoration-style: solid;
         -webkit-text-decoration-thickness: 2px;
-        text-underline-offset: 5px;
+        text-underline-offset: 7px;
     }
 
     .big-link:hover {
