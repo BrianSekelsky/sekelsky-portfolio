@@ -17,6 +17,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.render(scene, camera)
 
 scene.background = new THREE.Color( 0xffffff );
+scene.fog = new THREE.Fog( 0xffffff, 0.95, 100 ); 
 
 /**
  * Particles
@@ -40,7 +41,8 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    color: '#00A5E0',
+    // color: '#00A5E0',
+    color: '#07020D',
     // color: '#05F140',
     // color: '#0000ff',
     sizeAttenuation: textureLoader,
