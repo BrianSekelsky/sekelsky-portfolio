@@ -42,7 +42,7 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
     // color: '#00A5E0',
-    color: '#07020D',
+    color: '#37343b',
     // color: '#05F140',
     // color: '#0000ff',
     sizeAttenuation: textureLoader,
