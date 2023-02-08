@@ -8,6 +8,7 @@
     --primary: #004FFF;
     /* --primary: #35A7FF; */
     --secondary: #FF47DA;
+    --thirdary: #FA8334;
   }
 
 html, body {
@@ -378,7 +379,7 @@ hr {
     }
 
     .big-link:hover {
-        color: var(--secondary);
+        color: var(--thirdary);
         text-decoration: underline wavy 2px var(--primary);
         -webkit-text-decoration-line: underline;
         -webkit-text-decoration-color: var(--primary);
