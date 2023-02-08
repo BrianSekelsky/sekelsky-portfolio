@@ -27,7 +27,7 @@ const objectsDistance = 16
 const textureLoader = new THREE.TextureLoader()
 
 // Geometry
-const particlesCount = 1000
+const particlesCount = 3000
 const positions = new Float32Array(particlesCount * 30)
 
 for(let i = 0; i < particlesCount; i++)
@@ -43,11 +43,12 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
     // color: '#00A5E0',
-    color: '#37343b',
+    // color: '#37343b',
+    color: '#9e9ca1',
     // color: '#05F140',
     // color: '#0000ff',
     sizeAttenuation: textureLoader,
-    size: 0.2
+    size: 0.07
 })
 
 // Points
