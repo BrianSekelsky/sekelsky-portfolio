@@ -201,7 +201,7 @@ hr {
 }
 
 .big-link {
-    text-decoration: underline solid 2px var(--primary);
+    text-decoration: underline solid 2px var(--fg);
     text-underline-offset: 5px;
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-color: var(--fg);
@@ -369,15 +369,16 @@ hr {
 
     .big-link {
         /* text-decoration: underline wavy 3px var(--primary); */
-        text-decoration: underline solid 2px var(--fg);
+        text-decoration: underline solid 2px var(--secondary);
         -webkit-text-decoration-line: underline;
-        -webkit-text-decoration-color: var(--fg);
+        -webkit-text-decoration-color: var(--secondary);
         -webkit-text-decoration-style: solid;
         -webkit-text-decoration-thickness: 2px;
         text-underline-offset: 7px;
     }
 
     .big-link:hover {
+        color: var(--secondary);
         text-decoration: underline wavy 2px var(--primary);
         -webkit-text-decoration-line: underline;
         -webkit-text-decoration-color: var(--primary);
