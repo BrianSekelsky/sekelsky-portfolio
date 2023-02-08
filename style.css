@@ -1,5 +1,5 @@
 :root {
-    --bg: #0D0C1D;
+    --bg: #0C0910;
     --fg: #F7F7F7;
     /* --primary: #23CE6B; */
     /* --bg: #ffffff; */
@@ -7,7 +7,7 @@
     /* --primary: #0000ff; */
     --primary: #004FFF;
     /* --primary: #35A7FF; */
-    --secondary: #F9E900;
+    --secondary: #F75C03;
   }
 
 html, body {
