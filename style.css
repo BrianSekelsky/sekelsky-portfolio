@@ -125,10 +125,10 @@ h4 {
 .info {
     /* border-bottom: 1px solid white; */
     /* padding: 20px; */
-    margin-top: 100px;
+    margin-top: 20px;
     border-top: var(--fg) solid 1px;
     border-bottom: var(--fg) solid 1px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
@@ -200,7 +200,7 @@ hr {
 }
 
 .project-preview {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     cursor: pointer;
 }
 
@@ -328,6 +328,15 @@ hr {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .info {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .project-preview {
+        margin-bottom: 100px;
+    }
+
     .big-link {
         /* text-decoration: underline wavy 3px var(--primary); */
         text-decoration: underline wavy 2px var(--fg);
