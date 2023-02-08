@@ -1,13 +1,13 @@
 :root {
-    --bg: #07020D;
-    --fg: #ffffff;
+    --bg: #0D0C1D;
+    --fg: #F7F7F7;
     /* --primary: #23CE6B; */
     /* --bg: #ffffff; */
     /* --fg: #07020D; */
     /* --primary: #0000ff; */
-    --primary: #04F06A;
+    --primary: #004FFF;
     /* --primary: #35A7FF; */
-    --secondary: #05F140;
+    --secondary: #F9E900;
   }
 
 html, body {
@@ -20,7 +20,9 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: var(--bg);
+    /* background-color: var(--primary); */
     color: var(--fg);
+    margin: -8px;
 }
 
 p {
@@ -43,6 +45,7 @@ a:hover {
 }
 
 .nav {
+    padding: 5vw 10vw;
     border-bottom: 1px solid var(--fg);
     padding-bottom: 20px;
 }
@@ -82,6 +85,16 @@ h4 {
     margin-bottom: 0;
 }
 
+small {
+    font-family: "dapifer", serif;
+    font-style: italic;
+    font-size: 1rem;
+    background-color: var(--secondary);
+    color: var(--bg);
+    text-shadow: none;
+    padding: 0 10px 0 10px;
+}
+
 .name {
     text-decoration: none;
     font-family: "dapifer", serif;
@@ -94,10 +107,19 @@ h4 {
     text-decoration: none;
 }
 
+.secondary {
+    color: var(--secondary);
+}
+
 .flexbox {
     display: flex;
     justify-content: start;
     flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+
+.row {
+    flex: 0 0 100%;
 }
 
 .small > img {
@@ -138,9 +160,11 @@ h4 {
 }
 
 .project-info {
-    margin-top: 100px;
-    border-top: var(--fg) solid 1px;
-    margin-bottom: 50px;
+    /* margin-top: 100px; */
+    /* border-top: var(--fg) solid 1px; */
+    border-bottom: var(--fg) solid 1px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .project-process {
@@ -158,6 +182,7 @@ a:hover {
 }
 
 .footer {
+    padding: 5vw 10vw;
     margin-top: 50px;
     border-top: var(--fg) solid 1px;
     padding-top: 20px;
@@ -249,10 +274,9 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 100px;
-    border-top: var(--fg) solid 1px;
-    margin-bottom: 100px;
-    padding-top: 50px;
+    margin-top: 20px;
+    /* border-top: var(--fg) solid 1px; */
+    margin-bottom: 40px;
 }
 
 .third {
@@ -277,7 +301,7 @@ hr {
 .gallery {
     margin-top: 100px;
     padding-top: 100px;
-    border-top: var(--fg) solid 1px;
+    /* border-top: var(--fg) solid 1px; */
     margin-bottom: 100px;
     line-height:0;
     -webkit-column-count:2;
