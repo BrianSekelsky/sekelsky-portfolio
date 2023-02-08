@@ -1,9 +1,9 @@
 :root {
-    /* --bg: #07020D;
-    --fg: #ffffff; */
+    --bg: #07020D;
+    --fg: #ffffff;
     /* --primary: #23CE6B; */
-    --bg: #ffffff;
-    --fg: #07020D;
+    /* --bg: #ffffff; */
+    /* --fg: #07020D; */
     --primary: #0000ff;
     --secondary: #05F140;
   }
@@ -368,7 +368,7 @@ hr {
         text-align: center;
         padding-right: 20px;
         margin-left: 20px;
-        background-color: white;
+        background-color: var(--bg);
     }
 
     .special:hover {
