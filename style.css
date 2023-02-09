@@ -379,7 +379,6 @@ hr {
     }
 
     .big-link:hover {
-        color: var(--thirdary);
         text-decoration: underline wavy 2px var(--primary);
         -webkit-text-decoration-line: underline;
         -webkit-text-decoration-color: var(--primary);
