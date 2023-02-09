@@ -224,6 +224,7 @@ hr {
 }
 
 .webgl {
+    visibility: hidden;
     position: absolute;
     width: 100vw;
     /* background-color: blue; */
@@ -376,6 +377,11 @@ hr {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+    .webgl {
+        visibility: visible;
+    }
+
     .info {
         margin-top: 40px;
         margin-bottom: 100px;
