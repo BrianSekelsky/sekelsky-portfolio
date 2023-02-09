@@ -213,7 +213,7 @@ hr {
 }
 
 .small-link {
-    text-decoration: underline solid 0.06em var(--fg);
+    text-decoration: underline solid 0.06em var(--secondary);
     text-underline-offset: 5px;
 }
 
