@@ -1,5 +1,5 @@
 :root {
-    --bg: #0C0910;
+    --bg: rgb(12, 9, 16);
     --fg: #F7F7F7;
     /* --primary: #23CE6B; */
     /* --bg: #ffffff; */
@@ -158,6 +158,7 @@ small {
     /* border-bottom: var(--fg) solid 1px; */
     margin-bottom: 40px;
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
+    z-index: 2;
 }
 
 .project-info {
@@ -228,7 +229,17 @@ hr {
     /* background-color: blue; */
     margin: -8px;
     z-index: -100;
-    margin-top: -72px;
+    /* margin-top: -72px; */
+}
+
+.webgl-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 80vh;
+    width: 100vw;
+    background: linear-gradient(rgba(12, 9, 16, 0),rgba(12, 9, 16, 1));
 }
 
 .project-preview {
@@ -355,6 +366,12 @@ hr {
     width:100%;
     border-radius: 15px;
     margin: 20px;
+}
+
+.highlight {
+    background-color: var(--thirdary);
+    text-shadow: none;
+    padding: 0 10px 0 10px;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

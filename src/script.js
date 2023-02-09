@@ -6,7 +6,7 @@ const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
 const camera = new THREE.PerspectiveCamera(70, 2, 1, 1000);
-camera.position.z = 20
+camera.position.z = 6
 scene.add(camera)
 
 const canvas = document.querySelector('.webgl')
@@ -18,44 +18,31 @@ renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
 scene.background = new THREE.Color( 0x0C0910 );
-scene.fog = new THREE.Fog( 0xffffff, 0.95, 100 ); 
+scene.fog = new THREE.Fog( 0x0C0910, 0.95, 100 ); 
+
+// Light
+const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 10 );
+scene.add( light );
 
 /**
  * Particles
  */
-const objectsDistance = 16
-const textureLoader = new THREE.TextureLoader()
-
 // Geometry
-const particlesCount = 3000
-const positions = new Float32Array(particlesCount * 30)
-
-for(let i = 0; i < particlesCount; i++)
-{
-    positions[i * 3 + 0] = (Math.random() - 0.5) * 10
-    positions[i * 3 + 1] = objectsDistance * 0.5 - Math.random() * objectsDistance
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 10
-}
-
-const particlesGeometry = new THREE.BufferGeometry()
-particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+const particlesGeometry = new THREE.TorusKnotGeometry( 5, 1, 200, 32 )
+// const particlesGeometry = new THREE.BufferGeometry()
+const count = 5000
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    // color: '#00A5E0',
-    // color: '#37343b',
-    color: '#9e9ca1',
-    // color: '#05F140',
-    // color: '#0000ff',
-    sizeAttenuation: textureLoader,
-    size: 0.07
+    size: 0.02,
+    sizeAttenuation: true,
+    color: 0xc8cbcf
 })
 
 // Points
 const particles = new THREE.Points(particlesGeometry, particlesMaterial)
-particles.rotateX(120)
-particles.scale.set(6,6,6)
 scene.add(particles)
+
 
 /**
  * Parallax
@@ -82,8 +69,8 @@ const tick = () =>
     // Parallax
     const parallaxX = cursor.x
     const parallaxY = - cursor.y
-    camera.position.x = parallaxX * 5
-    camera.position.y = parallaxY * 5
+    camera.position.x = parallaxX * 4
+    camera.position.y = parallaxY * 4
 
     matrix.makeRotationY(Math.PI / 5000)
     camera.lookAt(0,0,0)
