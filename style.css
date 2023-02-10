@@ -259,6 +259,7 @@ hr {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    object-fit: cover;
 }
 
 .project-preview:hover {
