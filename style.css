@@ -475,6 +475,9 @@ hr {
 
     .right-align {
         justify-content: end;
+        -webkit-justify-content: flex-end;
+        align-items: flex-end;
+        -webkit-align-items: flex-end;
     }
 
     .third {
