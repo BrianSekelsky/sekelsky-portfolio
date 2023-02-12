@@ -67,10 +67,6 @@ body {
     margin: -8px;
 }
 
-.homepage {
-    background-color: var(--secondary);
-}
-
 p {
     font-size: 1.2em;
     font-weight: 300;
@@ -436,6 +432,10 @@ hr {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+    .homepage {
+        background-color: var(--secondary);
+    }
 
     .webgl {
         height: 102vh;
