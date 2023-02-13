@@ -137,6 +137,12 @@ h4 {
     margin-bottom: 0;
 }
 
+h5 {
+    text-align: center;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 3rem;
+}
+
 small {
     font-family: "dapifer", serif;
     font-style: italic;
@@ -444,7 +450,7 @@ hr {
 
     .info {
         margin-top: 100px;
-        margin-bottom: 300px;
+        margin-bottom: 240px;
     }
 
     .project-preview {
