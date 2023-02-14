@@ -20,7 +20,7 @@ renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
 scene.background = new THREE.Color( 0x0C0910 );
-scene.fog = new THREE.Fog( 0x0C0910, 0.95, 100 ); 
+// scene.fog = new THREE.Fog( 0x0C0910, 0.95, 100 ); 
 
 // Light
 const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 10 );
