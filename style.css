@@ -87,8 +87,10 @@ a:hover {
     -webkit-text-decoration-thickness: 1px;
 }
 
-.projects-container a:hover {
-    /* color: var(--fg); */
+.projects-container-flex {
+    display:flex;
+    flex-wrap: wrap;
+    margin: -40px;
 }
 
 .container {
@@ -297,19 +299,33 @@ hr {
 }
 
 .project-preview {
-    margin-bottom: 40px;
+    /* display: flex; */
+    margin: 0px 40px 40px 40px;
     cursor: pointer;
+}
+
+.project-preview-flex {
+    margin-top : 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-preview-flex h2 {
+    margin-top: 0;
+}
+.project-preview-flex h4 {
+    align-self: center;
 }
 
 .project-preview img {
     display: block;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 4px;
     height: auto;
 }
 
 .project-hero {
-    border-radius: 10px;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     object-fit: cover;
@@ -320,8 +336,19 @@ hr {
 }
 
 .project-preview-description {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     transition: all 0.2s ease-in-out;
+    /* padding: 0 0 0 20px; */
+}
+
+.project-preview-description h2 {
+    margin-bottom: 0;
+}
+.project-preview-description p {
+    margin: 0;
+}
+.project-preview-description p {
+    text-decoration: none !important;
 }
 
 .homepage .project-preview:hover .project-hero {
@@ -439,6 +466,14 @@ hr {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+    .projects-container-flex a {
+        width: 50%;
+        /* margin-left: 1%;
+        margin-right: 1%;
+        width: 48%; */
+    }
+    
+
     .homepage {
         background-color: var(--secondary);
     }
@@ -451,10 +486,6 @@ hr {
     .info {
         margin-top: 100px;
         margin-bottom: 240px;
-    }
-
-    .project-preview {
-        margin-bottom: 100px;
     }
 
     .big-link {
