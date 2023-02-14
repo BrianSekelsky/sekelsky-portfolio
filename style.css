@@ -302,7 +302,6 @@ hr {
     /* display: flex; */
     margin: 0px 40px 40px 40px;
     cursor: pointer;
-    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
 .project-preview-flex {
@@ -328,8 +327,9 @@ hr {
 .project-hero {
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
     object-fit: cover;
+    border: 1px solid rgba(0,0,0,0);
 }
 
 .homepage .project-hero {
@@ -354,10 +354,7 @@ hr {
 
 .homepage .project-preview:hover .project-hero {
     box-shadow: var(--shadow-elevation-high);
-}
-
-.homepage .project-preview:hover .project-hero {
-    box-shadow: var(--shadow-elevation-high);
+    border: 1px solid var(--fg);
 }
 
 .homepage .project-preview:hover {
@@ -486,7 +483,7 @@ hr {
 
     .webgl {
         /* height: 102vh; */
-        height: 2400px;
+        height: 2500px;
         width: 102vw;
     }
 

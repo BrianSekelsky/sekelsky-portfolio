@@ -48,8 +48,8 @@ const particles2 = new THREE.Points(particlesGeometry, particlesMaterial)
 scene.add(particles)
 scene.add(particles2)
 
-particles.position.set(0, 8, 0)
-particles2.position.set(0, -8, 0)
+particles.position.set(0, 11, 0)
+particles2.position.set(4, -14, 0)
 
 
 /**
