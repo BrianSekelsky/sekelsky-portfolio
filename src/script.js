@@ -5,8 +5,10 @@ const material = new THREE.MeshBasicMaterial({ color: 0x0000ff })
 const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
-const camera = new THREE.PerspectiveCamera(70, 2, 1, 1000);
-camera.position.z = 6
+const camera = new THREE.PerspectiveCamera(70, 0.3, 1, 1000);
+camera.position.z = 18
+camera.position.x = -10
+camera.position.y = -5
 scene.add(camera)
 
 const canvas = document.querySelector('.webgl')
@@ -41,7 +43,13 @@ const particlesMaterial = new THREE.PointsMaterial({
 
 // Points
 const particles = new THREE.Points(particlesGeometry, particlesMaterial)
+const particles2 = new THREE.Points(particlesGeometry, particlesMaterial)
+
 scene.add(particles)
+scene.add(particles2)
+
+particles.position.set(0, 8, 0)
+particles2.position.set(0, -8, 0)
 
 
 /**

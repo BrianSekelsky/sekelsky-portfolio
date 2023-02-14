@@ -29,7 +29,7 @@
     --secondary: #FF47DA;
     --thirdary: #04A777;
 
-    --shadow-color: 313deg 79% 32%;
+    --shadow-color: var(--fg);
     --shadow-elevation-low:
       0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.48),
       0.4px 0.5px 0.7px -1.4px hsl(var(--shadow-color) / 0.45),
@@ -281,7 +281,7 @@ hr {
     margin: -8px;
     z-index: -100;
     /* margin-top: -72px; */
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 .screen-height-container {
@@ -302,6 +302,7 @@ hr {
     /* display: flex; */
     margin: 0px 40px 40px 40px;
     cursor: pointer;
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
 .project-preview-flex {
@@ -358,6 +359,11 @@ hr {
 .homepage .project-preview:hover .project-hero {
     box-shadow: var(--shadow-elevation-high);
 }
+
+.homepage .project-preview:hover {
+    /* color: var(--secondary); */
+}
+
 
 .rounded-image {
     border-radius: 10px;
@@ -475,11 +481,12 @@ hr {
     
 
     .homepage {
-        background-color: var(--secondary);
+        /* background-color: var(--secondary); */
     }
 
     .webgl {
-        height: 102vh;
+        /* height: 102vh; */
+        height: 2400px;
         width: 102vw;
     }
 
