@@ -20,10 +20,10 @@ renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
 scene.background = new THREE.Color( 0x0C0910 );
-// scene.fog = new THREE.Fog( 0x0C0910, 0.95, 100 ); 
+scene.fog = new THREE.Fog( 0x0C0910, 0.95, 100 ); 
 
 // Light
-const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 10 );
+const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
 scene.add( light );
 
 /**
@@ -32,13 +32,13 @@ scene.add( light );
 // Geometry
 const particlesGeometry = new THREE.TorusKnotGeometry( 5, 1, 200, 32 )
 // const particlesGeometry = new THREE.BufferGeometry()
-const count = 5000
+const count = 2000
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.02,
     sizeAttenuation: true,
-    color: 0xc8cbcf
+    color: 0xc2c2c2
 })
 
 // Points
@@ -49,7 +49,7 @@ scene.add(particles)
 scene.add(particles2)
 
 particles.position.set(0, 11, 0)
-particles2.position.set(4, -14, 0)
+particles2.position.set(5, -15, 0)
 
 
 /**
