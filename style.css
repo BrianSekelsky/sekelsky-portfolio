@@ -9,12 +9,6 @@
     font-style: italic;
     src: url("fonts/PPEditorialNew-ThinItalic.ttf") format("opentype");
 }
-@font-face {
-    font-family: Editorial;
-    font-weight: light;
-    font-style: italic;
-    src: url("fonts/PPEditorialNew-UltraLightItalic.ttf") format("opentype");
-}
 
 :root {
     --bg: #0c0910;
