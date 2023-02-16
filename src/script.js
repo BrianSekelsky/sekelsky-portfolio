@@ -19,7 +19,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
-scene.background = new THREE.Color( 0x0C0910 );
+scene.background = new THREE.Color( 0x001f25 );
 scene.fog = new THREE.Fog( 0x0C0910, 0.95, 100 ); 
 
 // Light
@@ -38,7 +38,7 @@ const count = 2000
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.02,
     sizeAttenuation: true,
-    color: 0xc2c2c2
+    color: 0xa6eeff
 })
 
 // Points

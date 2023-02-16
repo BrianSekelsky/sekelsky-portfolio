@@ -16,8 +16,9 @@
 }
 
 :root {
-    --bg: #0c0910;
-    --fg: #F7F7F7;
+    /* --bg: #0c0910; */
+    --bg: #001f25;
+    --fg: #a6eeff;
     --primary: #6320EE;
     --secondary: #FF47DA;
     --thirdary: #04A777;
