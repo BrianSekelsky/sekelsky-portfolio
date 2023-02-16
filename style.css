@@ -365,17 +365,13 @@ hr {
     border: 1px solid var(--fg);
 }
 
-.homepage .project-preview:hover {
-    /* color: var(--secondary); */
-}
-
 
 .rounded-image {
     border-radius: 10px;
 }
 
 .profile {
-    width: 400px;
+    width: 100%;
 }
 
 .project-description {
@@ -383,7 +379,6 @@ hr {
     justify-content: space-between;
     flex-direction: column;
     margin-top: 20px;
-    /* border-top: var(--fg) solid 1px; */
     margin-bottom: 40px;
 }
 
@@ -407,10 +402,7 @@ hr {
 
 /* Art Gallery */
 .gallery {
-    margin-top: 100px;
     padding-top: 100px;
-    /* border-top: var(--fg) solid 1px; */
-    margin-bottom: 100px;
     line-height:0;
     -webkit-column-count:2;
     -webkit-column-gap:10px;
@@ -428,7 +420,7 @@ hr {
 .gallery img {
     width: 100% !important;
     height: auto !important;
-    margin-bottom:5px;
+    margin-bottom: 10px;
 }
 
 .gallery-small {
@@ -501,7 +493,7 @@ hr {
         width: 102vw;
     }
 
-    .info {
+    .homepage .info {
         margin-top: 100px;
         margin-bottom: 240px;
     }
@@ -538,6 +530,10 @@ hr {
     .third {
         padding: 0px 0px;
         width: 33%;
+    }
+
+    .third h2 {
+        width: 70%;
     }
     
     .two-thirds {
