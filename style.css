@@ -18,12 +18,6 @@
 :root {
     --bg: #0c0910;
     --fg: #F7F7F7;
-    /* --primary: #23CE6B; */
-    /* --bg: #ffffff; */
-    /* --fg: #07020D; */
-    /* --primary: #0000ff; */
-    /* --primary: #004fff; */
-    /* --primary: #35A7FF; */
     --primary: #6320EE;
     --secondary: #FF47DA;
     --thirdary: #04A777;
@@ -99,7 +93,7 @@ a:hover {
 .nav {
     /* padding: 5vw 10vw; */
     border-bottom: 1px solid var(--fg);
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     /* text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg); */
     background: linear-gradient(rgba(0,0,0,0), var(--bg));
 }
@@ -114,8 +108,8 @@ h1 {
     font-weight: 100;
     font-style: normal;
     /* font-size: 4rem; */
-    font-size: 4.4vw;
-    line-height: 5.4vw;
+    font-size: 2.2rem;
+    line-height: 3rem;
 }
 
 h2 {
@@ -168,6 +162,12 @@ small {
     font-style: italic;
 }
 
+.brian-link {
+    transform: translateY(4px);
+    font-size: 1.4rem;
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
+}
+
 .not-italic {
     font-style: normal;
 }
@@ -209,7 +209,7 @@ small {
 .nav-link {
     /* text-decoration: none; */
     padding-right: 20px;
-    margin: 20px 0px 20px 0px;
+    padding-top: 20px;
 }
 
 .nav-link:hover {
@@ -288,6 +288,7 @@ hr {
     z-index: -100;
     /* margin-top: -72px; */
     /* height: 50vh; */
+    display: none;
 }
 
 .screen-height-container {
@@ -469,11 +470,16 @@ hr {
 }
 
 .special {
-    visibility: hidden;
+    display: none;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
 
     .projects-container-flex a {
         width: 50%;
@@ -488,6 +494,7 @@ hr {
     }
 
     .webgl {
+        display: block;
         /* height: 102vh; */
         height: 2800px;
         width: 102vw;
@@ -538,13 +545,14 @@ hr {
     }
 
     .nav-link {
+        padding-top: 0px;
         padding-left: 20px;
         padding-right: 0px;
         margin: 0px;
     }
 
     .special {
-        visibility: visible;
+        display: block;
         border: 1px solid var(--fg);
         border-radius: 20px;
         text-align: center;
