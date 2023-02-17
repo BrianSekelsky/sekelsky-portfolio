@@ -96,12 +96,12 @@ a:hover {
     border-bottom: 1px solid var(--fg);
     padding-bottom: 10px;
     /* text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg); */
-    background: linear-gradient(rgba(0,0,0,0), var(--bg));
+    /* background: linear-gradient(rgba(0,0,0,0), var(--bg)); */
 }
 
 .footer {
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
-    background: linear-gradient( var(--bg), rgba(0,0,0,0));
+    /* background: linear-gradient( var(--bg), rgba(0,0,0,0)); */
 }
 
 h1 {
@@ -109,7 +109,6 @@ h1 {
     font-weight: 100;
     font-style: normal;
     /* font-size: 4rem; */
-    font-size: 2.2rem;
     line-height: 3rem;
 }
 
@@ -166,7 +165,7 @@ small {
 .brian-link {
     transform: translateY(4px);
     font-size: 1.4rem;
-    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg), 0 0 28px var(--bg),  0 0 32px var(--bg), 0 0 36px var(--bg);
 }
 
 .not-italic {
@@ -211,26 +210,17 @@ small {
     /* text-decoration: none; */
     padding-right: 20px;
     padding-top: 20px;
-}
-
-.nav-link:hover {
-    /* text-decoration: none; */
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
 .info {
-    /* border-bottom: 1px solid white; */
-    /* padding: 20px; */
     margin-top: 20px;
-    /* border-top: var(--fg) solid 1px; */
-    /* border-bottom: var(--fg) solid 1px; */
     margin-bottom: 100px;
-    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
     z-index: 2;
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
 .project-info {
-    /* margin-top: 100px; */
-    /* border-top: var(--fg) solid 1px; */
     border-bottom: var(--fg) solid 1px;
     margin-bottom: 40px;
     padding-bottom: 20px;
@@ -243,7 +233,6 @@ small {
 }
 
 .footer {
-    /* padding: 5vw 10vw; */
     margin-top: 50px;
     border-top: var(--fg) solid 1px;
     padding-top: 20px;
@@ -269,6 +258,8 @@ hr {
     -webkit-text-decoration-style: solid;
     -webkit-text-decoration-thickness: 3px;
     -webkit-text-decoration-offset: 7px;
+    -webkit-text-decoration-skip-ink: all;
+    /* text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg); */
 }
 
 .small-link {
@@ -512,8 +503,14 @@ hr {
         text-decoration: underline wavy 3px var(--primary);
         -webkit-text-decoration-line: underline;
         -webkit-text-decoration-color: var(--primary);
-        -webkit-text-decoration-style: wavy;
+        -webkit-text-decoration-style: solid;
         -webkit-text-decoration-thickness: 3px;
+        text-underline-offset: 7px;
+    }
+
+    /** Safari */
+    @media not all and (min-resolution: 0.001dpcm) {
+
     }
 
     .flexbox {
