@@ -217,6 +217,9 @@ small {
     margin-top: 20px;
     margin-bottom: 100px;
     z-index: 2;
+}
+
+.homepage .info {
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
