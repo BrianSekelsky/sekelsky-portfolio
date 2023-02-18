@@ -36,7 +36,7 @@ const count = 2000
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.014,
+    size: 0.018,
     sizeAttenuation: true,
     color: 0xa6eeff,
 })
