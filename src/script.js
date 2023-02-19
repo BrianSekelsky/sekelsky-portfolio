@@ -6,7 +6,7 @@ const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
 const camera = new THREE.PerspectiveCamera(70, 0.3, 1, 1000);
-camera.position.z = 18
+camera.position.z = 20
 camera.position.x = -10
 camera.position.y = -5
 scene.add(camera)
@@ -74,11 +74,15 @@ const tick = () =>
     // Camera rotate around scene
     const elapsedTime = clock.getElapsedTime()
 
+    // Rotate mesh
+    particles.rotation.y += 0.002
+    particles2.rotation.y += 0.002
+
     // Parallax
     const parallaxX = cursor.x
     const parallaxY = - cursor.y
-    camera.position.x = parallaxX * 4
-    camera.position.y = parallaxY * 4
+    camera.position.x = parallaxX * 1
+    camera.position.y = parallaxY * 2
 
     matrix.makeRotationY(Math.PI / 5000)
     camera.lookAt(0,0,0)
