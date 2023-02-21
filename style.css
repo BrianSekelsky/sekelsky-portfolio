@@ -74,10 +74,10 @@ a {
 
 a:hover {
     /* color: var(--primary); */
-    text-decoration: underline wavy 1px var(--primary);
+    text-decoration: underline wavy 1px var(--secondary);
     text-underline-offset: 2px;
     -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-color: var(--primary);
+    -webkit-text-decoration-color: var(--secondary);
     -webkit-text-decoration-style: solid;
     -webkit-text-decoration-thickness: 1px;
 }
