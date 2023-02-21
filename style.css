@@ -448,6 +448,9 @@ hr {
 
 .two-thirds img {
     width:100%;
+    box-shadow: var(--shadow-elevation-medium);
+    margin-top: 20px;
+
 }
 
 .highlight {
