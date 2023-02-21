@@ -19,11 +19,12 @@ const renderer = new THREE.WebGLRenderer({
 renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
-scene.background = new THREE.Color( 0x001f25 );
-scene.fog = new THREE.Fog( 0x0C0910, 0.95, 100 ); 
+scene.background = new THREE.Color( 0xf8fdff );
+scene.fog = new THREE.Fog( 0xf8fdff, 0.95, 100 ); 
 
 // Light
-const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
+// const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
+const light = new THREE.AmbientLight( 0x404040 ); // soft white light
 scene.add( light );
 
 /**
@@ -36,9 +37,9 @@ const count = 2000
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.018,
+    size: 0.02,
     sizeAttenuation: true,
-    color: 0xa6eeff,
+    color: 0x001f25,
 })
 
 // Points
