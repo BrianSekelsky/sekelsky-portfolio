@@ -274,6 +274,10 @@ h1 .big-link {
     text-decoration: underline solid 3px var(--secondary);
     text-underline-offset: 7px;
     -webkit-text-decoration-offset: 7px;
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-color: var(--secondary);
+    -webkit-text-decoration-style: solid;
+    -webkit-text-decoration-thickness: 3px;
 }
 
 .small-link {
@@ -523,18 +527,6 @@ h1 .big-link {
         -webkit-text-decoration-style: solid;
         -webkit-text-decoration-thickness: 2px;
         text-underline-offset: 3px;
-    }
-
-    h1 .big-link {
-        text-decoration: underline solid 3px var(--secondary);
-        text-underline-offset: 7px;
-        -webkit-text-decoration-offset: 7px;
-    }
-
-    h1 .big-link:hover {
-        text-decoration: underline wavy 3px var(--primary);
-        text-underline-offset: 7px;
-        -webkit-text-decoration-offset: 7px;
     }
 
     /** Safari */
