@@ -363,7 +363,7 @@ hr {
 }
 
 .rounded-image {
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .profile {
@@ -448,7 +448,7 @@ hr {
 
 .two-thirds img {
     width:100%;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     margin: 20px;
 }
 
