@@ -586,7 +586,7 @@ h1 .big-link {
 
     .special:hover {
         background-color: var(--primary);
-        /* color: var(--bg); */
+        color: var(--bg);
         border-color: var(--primary);
         text-shadow: none;
         text-decoration: none;

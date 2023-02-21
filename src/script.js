@@ -6,7 +6,7 @@ const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
 const camera = new THREE.PerspectiveCamera(70, 0.3, 1, 1000);
-camera.position.z = 20
+camera.position.z = 24
 camera.position.x = -10
 camera.position.y = -5
 scene.add(camera)
@@ -37,7 +37,7 @@ const count = 2000
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.02,
+    size: 0.024,
     sizeAttenuation: true,
     color: 0x001f25,
 })
@@ -50,7 +50,7 @@ scene.add(particles)
 scene.add(particles2)
 
 particles.position.set(0, 11, 0)
-particles2.position.set(5, -15, 0)
+particles2.position.set(5, -20, 0)
 
 
 /**
