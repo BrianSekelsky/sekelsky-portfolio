@@ -22,7 +22,7 @@ renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
 scene.background = new THREE.Color( 0xf8fdff );
-scene.fog = new THREE.Fog( 0xf8fdff, 0.95, 100 ); 
+// scene.fog = new THREE.Fog( 0xf8fdff, 0.95, 100 ); 
 
 // Light
 // const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
@@ -56,7 +56,7 @@ if(!isMobile){
 
 particles.position.set(0, 11, 0)
 if(isMobile){
-    particles.position.set(0, 4, 0)
+    particles.position.set(2, 4, 3)
 }
 particles2.position.set(0, -20, 0)
 
