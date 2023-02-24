@@ -45,7 +45,7 @@ const particlesMaterial = new THREE.PointsMaterial({
 if(!isMobile){
     particlesMaterial.size = 0.024
 } else {
-    particlesMaterial.size = 0.054
+    particlesMaterial.size = 0.038
 }
 
 // Points
