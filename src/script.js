@@ -37,12 +37,16 @@ const particlesGeometry = new THREE.TorusKnotGeometry( 5, 1, 200, 32 )
 // const particlesGeometry = new THREE.BufferGeometry()
 const count = 2000
 
-// Material
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.024,
-    sizeAttenuation: true,
     color: 0x001f25,
-})
+});
+// Material
+if(!isMobile){
+    particlesMaterial.size = 0.024
+} else {
+    particlesMaterial.size = 0.054
+}
 
 // Points
 const particles = new THREE.Points(particlesGeometry, particlesMaterial)
