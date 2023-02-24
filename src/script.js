@@ -58,7 +58,7 @@ particles.position.set(0, 11, 0)
 if(isMobile){
     particles.position.set(0, 4, 0)
 }
-particles2.position.set(5, -20, 0)
+particles2.position.set(0, -20, 0)
 
 
 /**
