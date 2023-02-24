@@ -22,6 +22,7 @@
     --primary: #6320EE;
     --secondary: #FF47DA;
     --thirdary: #04A777;
+    --fourthary: #FF3A20;
 
     --shadow-color: 198deg 27% 57%;
     --shadow-elevation-low:
@@ -312,7 +313,6 @@ hr {
 }
 
 .project-preview-flex {
-    margin-top : 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -341,7 +341,7 @@ hr {
 }
 
 .project-preview-description {
-    padding-top: 15px;
+    margin-top: 20px;
     /* margin-top: 10px; */
     transition: all 0.2s ease-in-out;
     /* padding: 0 0 0 20px; */
@@ -468,6 +468,14 @@ hr {
     display: none;
 }
 
+.client {
+    color: var(--thirdary);
+}
+
+.speculative {
+    color: var(--primary);
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
@@ -583,6 +591,8 @@ hr {
         padding-right: 20px;
         margin-left: 20px;
         background-color: var(--bg);
+        transform: translateY(2px);
+        padding-bottom: 2px;
     }
 
     .special:hover {
