@@ -1,3 +1,5 @@
+const isMobile = window.matchMedia('only screen and (max-width: 768px)').matches;
+
 const scene = new THREE.Scene()
 
 const geometry = new THREE.BoxGeometry(1, 1, 1)
@@ -47,9 +49,15 @@ const particles = new THREE.Points(particlesGeometry, particlesMaterial)
 const particles2 = new THREE.Points(particlesGeometry, particlesMaterial)
 
 scene.add(particles)
-scene.add(particles2)
+
+if(!isMobile){
+    scene.add(particles2)
+}
 
 particles.position.set(0, 11, 0)
+if(isMobile){
+    particles.position.set(0, 4, 0)
+}
 particles2.position.set(5, -20, 0)
 
 
