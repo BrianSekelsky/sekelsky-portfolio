@@ -173,7 +173,7 @@ mark {
 .brian-link {
     transform: translateY(4px);
     font-size: 1.4rem;
-    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg), 0 0 28px var(--bg),  0 0 32px var(--bg), 0 0 36px var(--bg);
+    background-color: var(--bg);
 }
 
 .not-italic {
@@ -219,7 +219,7 @@ mark {
     /* text-decoration: none; */
     padding-right: 20px;
     padding-top: 20px;
-    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
+    background-color: var(--bg);
 }
 
 .info {
