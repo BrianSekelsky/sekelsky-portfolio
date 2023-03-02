@@ -165,6 +165,7 @@ h5 {
 small {
     font-size: 0.8rem;
     font-family: "ibm-plex-sans", sans-serif;
+    font-weight: 400;
 }
 
 .name {
@@ -209,7 +210,6 @@ small {
 .small{
     display: flex;
     justify-content: center;
-    font-weight: 400;
 }
 
 .column {
