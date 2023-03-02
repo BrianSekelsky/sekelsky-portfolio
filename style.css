@@ -51,7 +51,7 @@ html, body {
 }
 
 body {
-    font-family: "ibm-plex-mono", sans-serif;
+    font-family: "ibm-plex-sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     background-color: var(--bg);
@@ -104,8 +104,12 @@ mark {
 }
 
 .footer {
-    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
+    /* text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg); */
     /* background: linear-gradient( var(--bg), rgba(0,0,0,0)); */
+}
+
+.copy-right {
+    
 }
 
 h1 {
@@ -160,7 +164,7 @@ h5 {
 
 small {
     font-size: 0.8rem;
-    font-family: "ibm-plex-mono", sans-serif;
+    font-family: "ibm-plex-sans", sans-serif;
 }
 
 .name {
@@ -252,7 +256,7 @@ small {
     margin-top: 50px;
     border-top: var(--fg) solid 1px;
     padding-top: 20px;
-    font-family: "proxima-nova", sans-serif;
+    font-family: "ibm-plex-sans", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
