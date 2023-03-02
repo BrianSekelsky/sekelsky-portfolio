@@ -83,8 +83,6 @@ a:hover {
 mark {
     background-color: var(--bg);
     color: var(--fg);
-    position: relative;
-    z-index: -1;
 }
 
 .projects-container-flex {
@@ -127,6 +125,7 @@ h2 {
     font-family: "ibm-plex-sans", sans-serif;
     font-weight: 600;
     font-style: normal;
+    margin-top: 20px;
 }
 
 .no-margin {
@@ -247,7 +246,7 @@ small {
 }
 
 .project-process {
-    margin-top: 100px;
+    margin-top: 40px;
     border-top: var(--fg) solid 1px;
     margin-bottom: 100px;
 }
@@ -406,10 +405,6 @@ hr {
 
 .img-fill {
     width: 100%;
-}
-
-.img-partial {
-    width: 40%;
 }
 
 /* Art Gallery */
