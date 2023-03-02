@@ -109,7 +109,7 @@ mark {
 }
 
 .copy-right {
-    
+
 }
 
 h1 {
@@ -452,7 +452,7 @@ hr {
 .img-caption {
     font-family: "ibm-plex-mono", sans-serif;
     font-size: 0.8em;
-    margin-top: 0;
+    margin-top: 5px;
     color: var(--fg);
     opacity: 0.6;
     font-weight: 400;
