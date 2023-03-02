@@ -255,7 +255,7 @@ small {
 .footer {
     margin-top: 50px;
     border-top: var(--fg) solid 1px;
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: "ibm-plex-sans", sans-serif;
     font-weight: 100;
     font-style: normal;
