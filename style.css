@@ -52,7 +52,7 @@ html, body {
 
 body {
     font-family: "ibm-plex-sans", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     background-color: var(--bg);
     color: var(--fg);
@@ -61,7 +61,7 @@ body {
 
 p {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 a {
@@ -455,7 +455,7 @@ hr {
     margin-top: 5px;
     color: var(--fg);
     opacity: 0.6;
-    font-weight: 400;
+    font-weight: 300;
     font-style: italic;
     /* text-align: right; */
 }
