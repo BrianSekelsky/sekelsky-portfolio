@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vwk6fyq.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
   </head>
   <body class="homepage">
     <canvas class="webgl"></canvas>
@@ -28,13 +29,15 @@
         </div>
         <div class="info flexbox">
             <!-- <h1 class="row">My name is <span class="name">Brian Sekelsky.</span> I am a <a class="big-link" href="#design">designer</a>, <a class="big-link" href="#develop">developer</a>, & <a class="big-link" href="#research">researcher</a>. I am currently completing my master&rsquo;s in graphic & experience design at North Carolina State University.</h1> -->
-            <h1 class="row"><mark>Hello, I&rsquo;m <span class="name">Brian Sekelsky</span>: an <a class="big-link" href="#design">interaction designer</a>, <a class="big-link" href="#research">researcher</a>, & <a class="big-link" href="#develop">programmer</a>. I&rsquo;m currently completing my master&rsquo;s in graphic & experience design at North Carolina State University.</mark></h1>
+            <h1 class="row"><mark>Hello, I&rsquo;m <span class="name">Brian Sekelsky</span>: an interaction designer, researcher, & programmer. I&rsquo;m currently completing my master&rsquo;s in graphic & experience design at North Carolina State University.</mark></h1>
             <!-- <small>i am looking for a job !</small> -->
         </div>
 
         <!-- Projects -->
         <div id="work" class="projects-container">
-            <!-- <h5>Projects</h5> -->
+            <div class="section-header">
+            <h4>Projects</h4>
+            </div>
 
             <div class="projects-container-flex">
                 <a href="scale-worlds-web.html">
@@ -128,15 +131,15 @@
                         </div>
                         <div class="project-preview-description">
                             <div class="project-preview-flex">
-                                <h2><mark>TerraFirma Software</mark></h2>
-                                <h4><mark>2021</mark></h4>
+                                <h2>TerraFirma Software</h2>
+                                <h4>2021</h4>
                             </div>
                             <div class="project-preview-flex">
-                                <small><mark>BRANDING + WEB DESIGN</mark></small>
-                                <mark><small class="client">CLIENT WORK</small></mark>
+                                <small>BRANDING + WEB DESIGN</small>
+                                <small class="client">CLIENT WORK</small>
                             </div>
                             <p style="padding-top:20px;">
-                                <mark>Full scale rebranding of Puerto Rico based landscape data visualization company, TerraFirma Software.</mark>
+                                Full scale rebranding of Puerto Rico based landscape data visualization company, TerraFirma Software.
                             </p>
                         </div>
                     </div>
@@ -149,15 +152,15 @@
                         </div>
                         <div class="project-preview-description">
                             <div class="project-preview-flex">
-                                <h2><mark>Parts Unlimited</mark></h2>
-                                <h4><mark>2019</mark></h4>
+                                <h2>Parts Unlimited</h2>
+                                <h4>2019</h4>
                             </div>
                             <div class="project-preview-flex">
-                                <small><mark>UX/UI DESIGN + FRONTEND DEVELOPMENT</mark></small>
-                                <mark><small class="client">CLIENT WORK</small></mark>
+                                <small>UX/UI DESIGN + FRONTEND DEVELOPMENT</small>
+                                <small class="client">CLIENT WORK</small>
                             </div>
                             <p style="padding-top:20px;">
-                                <mark>Designing and building a new e-commerce platform for after-market motorsports parts.</mark>
+                                Designing and building a new e-commerce platform for after-market motorsports parts.
                             </p>
                         </div>
                     </div>
@@ -181,4 +184,5 @@
   </body>
   <script src="js/three.js"></script>
   <script src="src/script.js"></script>
+  <script src="src/lazy.js"></script>
 </html>

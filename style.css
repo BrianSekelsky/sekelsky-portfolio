@@ -83,6 +83,8 @@ a:hover {
 mark {
     background-color: var(--bg);
     color: var(--fg);
+    position: relative;
+    z-index: -1;
 }
 
 .projects-container-flex {
@@ -232,10 +234,6 @@ small {
     margin-top: 20px;
     margin-bottom: 20px;
     z-index: 2;
-}
-
-.homepage .info {
-    /* text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg); */
 }
 
 .project-info {
@@ -493,6 +491,12 @@ hr {
     display: none;
 }
 
+.section-header {
+    border-bottom: 1px solid var(--fg);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
@@ -531,7 +535,7 @@ hr {
 
     .homepage .info {
         margin-top: 100px;
-        margin-bottom: 240px;
+        margin-bottom: 100px;
     }
 
     .big-link {
@@ -560,7 +564,7 @@ hr {
         -webkit-text-decoration-color: var(--secondary);
         -webkit-text-decoration-style: solid;
         -webkit-text-decoration-thickness: 2px;
-        text-underline-offset: 7px;
+        text-underline-offset: 5px;
     }
 
     h1 .big-link:hover {
@@ -569,7 +573,7 @@ hr {
         -webkit-text-decoration-color: var(--primary);
         -webkit-text-decoration-style: solid;
         -webkit-text-decoration-thickness: 2px;
-        text-underline-offset: 7px;
+        text-underline-offset: 2px;
     }
 
     /** Safari */
