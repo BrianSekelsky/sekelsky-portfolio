@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vwk6fyq.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -35,20 +34,20 @@
         <!-- Art -->
         <div class="gallery">
   
-            <img src="media/art/1.gif">
-            <img src="media/art/2.png">
-            <img src="media/art/3.png">
-            <img src="media/art/4.png">
-            <img src="media/art/5.gif">
-            <img src="media/art/6.png">
-            <img src="media/art/7.png">
-            <img src="media/art/8.jpeg">
-            <img src="media/art/9.png">
-            <img src="media/art/10.png">
-            <img src="media/art/11.png">
-            <img src="media/art/12.png">
-            <img src="media/art/13.jpeg">
-            <img src="media/art/14.png">
+            <img data-src="media/art/1.gif">
+            <img data-src="media/art/2.png">
+            <img data-src="media/art/3.png">
+            <img data-src="media/art/4.png">
+            <img data-src="media/art/5.gif">
+            <img data-src="media/art/6.png">
+            <img data-src="media/art/7.png">
+            <img data-src="media/art/8.jpeg">
+            <img data-src="media/art/9.png">
+            <img data-src="media/art/10.png">
+            <img data-src="media/art/11.png">
+            <img data-src="media/art/12.png">
+            <img data-src="media/art/13.jpeg">
+            <img data-src="media/art/14.png">
 
         </div>
         <!-- Footer -->
@@ -64,4 +63,10 @@
         </div>
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+        // Your custom settings go here
+    });
+  </script>
 </html>
