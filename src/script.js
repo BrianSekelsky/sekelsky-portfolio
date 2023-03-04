@@ -7,10 +7,10 @@ const material = new THREE.MeshBasicMaterial({ color: 0x0000ff })
 const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
-const camera = new THREE.PerspectiveCamera(70, 0.3, 1, 1000);
+const camera = new THREE.PerspectiveCamera(100, 0.3, 1, 1000);
 camera.position.z = 24
 camera.position.x = -10
-camera.position.y = -5
+camera.position.y = 0
 scene.add(camera)
 
 const canvas = document.querySelector('.webgl')
@@ -22,7 +22,7 @@ renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
 scene.background = new THREE.Color( 0xf8fdff );
-// scene.fog = new THREE.Fog( 0xf8fdff, 0.95, 100 ); 
+scene.fog = new THREE.Fog( 0xf8fdff, 0.95, 100 ); 
 
 // Light
 // const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
@@ -33,17 +33,18 @@ scene.add( light );
  * Particles
  */
 // Geometry
-const particlesGeometry = new THREE.TorusKnotGeometry( 5, 1, 200, 32 )
+const particlesGeometry = new THREE.TorusKnotGeometry( 7, 1.5, 200, 32 )
+particlesGeometry.rotateZ(Math.PI / 2)
 // const particlesGeometry = new THREE.BufferGeometry()
 const count = 2000
 
 const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.024,
+    size: 0.015,
     color: 0x001f25,
 });
 // Material
 if(!isMobile){
-    particlesMaterial.size = 0.024
+    particlesMaterial.size = 0.020
 } else {
     particlesMaterial.size = 0.038
 }
@@ -58,11 +59,11 @@ if(!isMobile){
     scene.add(particles2)
 }
 
-particles.position.set(0, 11, 0)
+particles.position.set(0, 20, 0)
 if(isMobile){
     particles.position.set(2, 4, 3)
 }
-particles2.position.set(0, -20, 0)
+particles2.position.set(0, -32, 0)
 
 
 /**
@@ -88,14 +89,30 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
 
     // Rotate mesh
-    particles.rotation.y += 0.002
-    particles2.rotation.y += 0.002
+    // particles.rotation.y += 0.002
+    // particles2.rotation.y += 0.002
+    camera.position.x += 0.004
+    camera.position.y += 0.004
+
+    if(isMobile){
+        camera.position.x += 0.02
+        camera.position.y += 0.02
+    }
+
+    // particles.rotation.x += 0.002
+    // particles2.rotation.x += 0.002
 
     // Parallax
     const parallaxX = cursor.x
     const parallaxY = - cursor.y
-    camera.position.x = parallaxX * 1
-    camera.position.y = parallaxY * 2
+    // camera.position.x = parallaxX * 1
+    // camera.position.y = parallaxY * 2
+
+    particles.rotation.y = parallaxX * 0.5
+    particles.rotation.x = parallaxY * 0.5
+
+    particles2.rotation.y = parallaxX * 0.5
+    particles2.rotation.x = parallaxY * 0.5
 
     matrix.makeRotationY(Math.PI / 5000)
     camera.lookAt(0,0,0)

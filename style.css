@@ -46,7 +46,6 @@
 }
 
 html, body {
-    /* max-width: 100%; */
     overflow-x: hidden;
 }
 
@@ -471,6 +470,10 @@ hr {
 
 }
 
+.step img {
+    box-shadow: var(--shadow-elevation-medium);
+}
+
 .highlight {
     background-color: var(--thirdary);
     text-shadow: none;
@@ -681,4 +684,12 @@ hr {
         margin-bottom: 40px;
     }
 }
+
+@media screen and (min-width: 1300px) {
+    body {
+      max-width: 1600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
