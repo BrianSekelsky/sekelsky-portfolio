@@ -7,10 +7,13 @@ const material = new THREE.MeshBasicMaterial({ color: 0x0000ff })
 const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
-const camera = new THREE.PerspectiveCamera(100, 0.3, 1, 1000);
-camera.position.z = 24
-camera.position.x = -10
+const camera = new THREE.PerspectiveCamera(70, 0.3, 1, 1000);
+camera.position.z = -20
+camera.position.x = 0
 camera.position.y = 0
+
+camera.lookAt(0,0,0)
+
 scene.add(camera)
 
 const canvas = document.querySelector('.webgl')
@@ -22,7 +25,7 @@ renderer.render(scene, camera)
 
 // scene.background = new THREE.Color( 0xffffff );
 scene.background = new THREE.Color( 0xf8fdff );
-scene.fog = new THREE.Fog( 0xf8fdff, 0.95, 100 ); 
+scene.fog = new THREE.Fog( 0xf8fdff, 0.95, 40 ); 
 
 // Light
 // const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
@@ -44,7 +47,7 @@ const particlesMaterial = new THREE.PointsMaterial({
 });
 // Material
 if(!isMobile){
-    particlesMaterial.size = 0.020
+    particlesMaterial.size = 0.054
 } else {
     particlesMaterial.size = 0.038
 }
@@ -56,10 +59,10 @@ const particles2 = new THREE.Points(particlesGeometry, particlesMaterial)
 scene.add(particles)
 
 if(!isMobile){
-    scene.add(particles2)
+    // scene.add(particles2)
 }
 
-particles.position.set(0, 20, 0)
+particles.position.set(0, 2, 0)
 if(isMobile){
     particles.position.set(2, 4, 3)
 }
@@ -89,10 +92,11 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
 
     // Rotate mesh
-    // particles.rotation.y += 0.002
-    // particles2.rotation.y += 0.002
-    camera.position.x += 0.004
-    camera.position.y += 0.004
+    // particles.rotation.y += 0.004
+    // particles.rotation.z += 0.001
+    // camera.position.x += 0.02
+    // camera.position.y -= 0.02
+
 
     if(isMobile){
         camera.position.x += 0.02
@@ -108,11 +112,20 @@ const tick = () =>
     // camera.position.x = parallaxX * 1
     // camera.position.y = parallaxY * 2
 
-    particles.rotation.y = parallaxX * 0.5
-    particles.rotation.x = parallaxY * 0.5
+    console.log(parallaxX)
+    console.log(parallaxY)
 
-    particles2.rotation.y = parallaxX * 0.5
-    particles2.rotation.x = parallaxY * 0.5
+    camera.lookAt(0,0,0)
+
+    particles.rotation.y += parallaxX * 0.05
+    particles.rotation.x += parallaxX * 0.05
+
+    let scale = 0.5 - parallaxY
+
+    particles.scale.set(scale, scale, scale)
+
+    // particles2.rotation.y = parallaxX * 0.5
+    // particles2.rotation.x = parallaxY * 0.5
 
     matrix.makeRotationY(Math.PI / 5000)
     camera.lookAt(0,0,0)
