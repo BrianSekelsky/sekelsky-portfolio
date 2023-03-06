@@ -117,8 +117,8 @@ const tick = () =>
 
     camera.lookAt(0,0,0)
 
-    particles.rotation.y += parallaxX * 0.05
-    particles.rotation.x += parallaxX * 0.05
+    particles.rotation.y += parallaxX * 0.03
+    particles.rotation.x += parallaxX * 0.03
 
     let scale = 0.5 - parallaxY
 
