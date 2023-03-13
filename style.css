@@ -528,7 +528,7 @@ a:hover .speculative {
 
 .item-grid {
     display: grid;
-    grid-row-gap: 4vw;
+    grid-row-gap: 40px;
 }
 
 .grid-4 {
