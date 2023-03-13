@@ -127,6 +127,7 @@ h1 {
     font-style: normal;
     /* font-size: 4rem; */
     line-height: 3rem;
+    text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
 h2 {

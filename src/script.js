@@ -47,7 +47,7 @@ const particlesGeometry = new THREE.SphereGeometry( 15, 64, 64 );
 
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.015,
-    color: 0x9da4b3,
+    color: 0xd1dced,
 });
 
 // const particlesMaterial = new THREE.MeshBasicMaterial();
