@@ -23,14 +23,13 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.render(scene, camera)
 
-// scene.background = new THREE.Color( 0xffffff );
 scene.background = new THREE.Color( 0x000000 );
 scene.fog = new THREE.Fog( 0x000000, 0.95, 40 ); 
 
 // Light
-// const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
+const light2 = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2 );
 const light = new THREE.AmbientLight( 0x404040 ); // soft white light
-scene.add( light );
+scene.add( light, light2 );
 
 const rotationGroup = new THREE.Group();
 
@@ -39,14 +38,14 @@ const rotationGroup = new THREE.Group();
  */
 // Geometry
 // const particlesGeometry = new THREE.TorusKnotGeometry( 7, 1.5, 200, 32 )
-// const particlesGeometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
-const particlesGeometry = new THREE.SphereGeometry( 15, 64, 64 );
+const particlesGeometry = new THREE.TorusGeometry( 10, 3, 64, 200 );
+// const particlesGeometry = new THREE.SphereGeometry( 15, 128, 128 );
 // const particlesGeometry = new THREE.BoxGeometry( 15, 15, 15, 15, 15, 15 );
 // particlesGeometry.rotateZ(Math.PI / 2)
 // const particlesGeometry = new THREE.BufferGeometry()
 
 const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.015,
+    size: 0.1,
     color: 0xd1dced,
 });
 
@@ -54,16 +53,29 @@ const particlesMaterial = new THREE.PointsMaterial({
 
 // Material
 if(!isMobile){
-    particlesMaterial.size = 0.064
+    particlesMaterial.size = 0.05
 } else {
-    particlesMaterial.size = 0.038
+    particlesMaterial.size = 0.05
 }
+
+// const particlesGeometry = new THREE.BufferGeometry()
+// const count = 5000
+// const positions = new Float32Array(count * 3)
+// for(let i = 0; i < count * 3; i++){
+//     positions[i] = (Math.random() - 0.5) * 20
+// }
+// particlesGeometry.setAttribute(
+//     'position',
+//     new THREE.BufferAttribute(positions, 3)
+// )
 
 // Points
 const particles = new THREE.Points(particlesGeometry, particlesMaterial)
 const particles2 = new THREE.Points(particlesGeometry, particlesMaterial)
 
-scene.add(rotationGroup)
+console.log(particles.geometry)
+
+// scene.add(rotationGroup)
 
 if(!isMobile){
     // scene.add(particles2)
@@ -77,7 +89,7 @@ particles2.position.set(0, -32, 0)
 
 particles.scale.set(0.5, 0.5, 0.5)
 
-rotationGroup.add(particles)
+scene.add(particles)
 
 /**
  * Parallax
@@ -95,10 +107,48 @@ let matrix = new THREE.Matrix4()
 
 const clock = new THREE.Clock()
 
-console.log(rotationGroup)
+// Raycaster
+let raycaster = new THREE.Raycaster();
+let pointer = new THREE.Vector2();
+// let intersects = []
+let INTERSECTED = null
+const PARTICLE_SIZE = 3
+let theta = 0
+let radius = 500
 
 const tick = () =>
 {
+
+    camera.updateMatrixWorld();
+
+    raycaster.setFromCamera( pointer, camera )
+    const intersects = raycaster.intersectObjects( particles, false );
+
+    const geometry = particles.geometry;
+    const attributes = geometry.attributes;
+
+    if ( intersects.length > 0 ) {
+
+        console.log(intersects[0])
+
+        // if ( INTERSECTED ) {
+        //     console.log(INTERSECTED)
+        // }
+
+        // INTERSECTED = intersects[ 0 ].object;
+        // INTERSECTED.currentHex = INTERSECTED.material.emissive.set();
+        // INTERSECTED.material.emissive.set( 0xff0000 );
+
+
+    } else {
+
+        // if ( INTERSECTED ) INTERSECTED.material.emissive.set( INTERSECTED.currentHex );
+
+        INTERSECTED = null;
+
+    }
+
+
 
     // Camera rotate around scene
     const elapsedTime = clock.getElapsedTime()
@@ -126,8 +176,14 @@ const tick = () =>
 
     // camera.lookAt(0,0,0)
 
-    rotationGroup.children[0].rotation.x += parallaxY * 0.02
-    rotationGroup.children[0].rotation.y += parallaxX * 0.02
+    gsap.to(particles.rotation, { // selector text, Array, or object
+        x: parallaxY * 2,
+        y: parallaxX * 2,
+        duration: 1,
+      });
+
+    // rotationGroup.children[0].rotation.x += parallaxY * 0.02
+    // rotationGroup.children[0].rotation.y += parallaxX * 0.02
 
     let scale = 0.6 - parallaxY * 0.5
 
@@ -167,3 +223,19 @@ function resizeCanvasToDisplaySize() {
       // update any render target sizes here
     }
   }
+
+function onPointerMove( event ) {
+
+    pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+    pointer.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+}
+
+function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
