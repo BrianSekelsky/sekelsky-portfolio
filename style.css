@@ -334,6 +334,7 @@ hr {
 
 .project-preview-flex h2 {
     margin-top: 0;
+    font-size: 1.4rem;
 }
 .project-preview-flex h4 {
     align-self: center;
@@ -359,6 +360,14 @@ hr {
 
 .project-hero img {
     display: block;
+}
+
+.homepage .project-hero {
+    border-radius: 10px;
+}
+
+.homepage .project-hero img {
+    border-radius: 10px;
 }
 
 .project-preview-description {
