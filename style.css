@@ -174,8 +174,11 @@ h5 {
 
 small {
     font-size: 0.8rem;
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "ibm-plex-mono", sans-serif;
+    /* font-family: "ibm-plex-sans", sans-serif; */
     font-weight: 200;
+    text-transform: lowercase;
+    font-style: italic;
 }
 
 .name {
@@ -473,7 +476,7 @@ hr {
     margin-top: 5px;
     color: var(--thirdary);
     /* opacity: 0.8; */
-    font-weight: 400;
+    font-weight: 200;
     font-style: italic;
     /* text-align: right; */
 }
@@ -566,13 +569,13 @@ a:hover .speculative {
 
 .grid-2-asymetrical {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
 }
 
 .grid-2-asymetrical-reverse {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
 }
 
@@ -584,6 +587,23 @@ a:hover .speculative {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+    .item-grid {
+        display: grid;
+        grid-row-gap: 100px;
+    }
+
+    .grid-2-asymetrical {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+    }
+    
+    .grid-2-asymetrical-reverse {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+    }
 
     h1 {
         font-size: 4rem;
