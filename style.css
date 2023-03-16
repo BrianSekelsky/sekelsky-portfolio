@@ -358,6 +358,11 @@ hr {
     /* border: 1px solid rgba(0,0,0,0); */
 }
 
+.bordered {
+    border: 1px solid var(--fg);
+    margin: -2px;
+}
+
 .project-hero img {
     display: block;
 }
