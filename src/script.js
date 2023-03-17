@@ -81,7 +81,7 @@ if(!isMobile){
     // scene.add(particles2)
 }
 
-particles.position.set(0, 1.8, 0)
+particles.position.set(0, 2, 0)
 if(isMobile){
     particles.position.set(2, 4, 3)
 }
