@@ -589,6 +589,10 @@ a:hover .speculative {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
 }
+
+.loader {
+    width: 50%;
+}
   
 
 /* Medium devices (landscape tablets, 768px and up) */
