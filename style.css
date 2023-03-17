@@ -131,7 +131,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: "ibm-plex-sans", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -422,6 +422,11 @@ hr {
 .third {
     width: 100%;
     padding-top: 20px;
+    align-self: baseline;
+}
+
+.auto-align{
+    align-self: auto;
 }
 
 .two-thirds {
