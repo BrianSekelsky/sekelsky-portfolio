@@ -511,13 +511,11 @@ hr {
 
 .client {
     color: var(--thirdary);
-    display: none;
     transition: all 0.3s ease-in-out;
 }
 
 .speculative {
     color: var(--secondary);
-    display: none;
     transition: all 0.3s ease-in-out;
 }
 
