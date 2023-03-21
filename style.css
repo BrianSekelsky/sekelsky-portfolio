@@ -182,7 +182,7 @@ small {
     /* font-family: "ibm-plex-sans", sans-serif; */
     font-weight: 200;
     text-transform: lowercase;
-    /* font-style: italic; */
+    font-style: italic;
 }
 
 .name {
