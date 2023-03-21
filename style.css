@@ -656,6 +656,8 @@ a:hover .speculative {
         /* height: 102vh; */
         height: 130vh;
         width: 102vw;
+        max-width: 1600px;
+        margin: 0 auto;
         margin-top: 0px;
     }
 

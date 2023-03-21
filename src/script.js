@@ -8,9 +8,9 @@ const mesh = new THREE.Mesh(geometry, material)
 // scene.add(mesh)
 
 const camera = new THREE.PerspectiveCamera(70, 0.3, 1, 1000);
-camera.position.z = -20
+camera.position.z = -20 - ((-1 + window.innerHeight / 764) * 10)
 camera.position.x = 0
-camera.position.y = 0
+camera.position.y = 2
 
 camera.lookAt(0,0,0)
 
@@ -81,14 +81,12 @@ if(!isMobile){
     // scene.add(particles2)
 }
 
-particles.position.set(0, 2, 0)
-if(isMobile){
-    particles.position.set(2, 4, 3)
-}
-particles2.position.set(0, -32, 0)
+particles.position.set(0.4, ((-1 + window.innerHeight / 764) * 8) + 2, 0)
 
-particles.scale.set(0.5, 0.5, 0.5)
+// let scale = (window.innerWidth / 1140) * 0.5
+let scale = 0.5
 
+particles.scale.set(scale, scale, scale)
 scene.add(particles)
 
 /**
@@ -159,11 +157,6 @@ const tick = () =>
     // camera.position.x += 0.02
     // camera.position.y -= 0.02
 
-
-    if(isMobile){
-        camera.position.x += 0.02
-        camera.position.y += 0.02
-    }
 
     // particles.rotation.x += 0.002
     // particles2.rotation.x += 0.002
