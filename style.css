@@ -376,11 +376,11 @@ hr {
 }
 
 .homepage .project-hero {
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .homepage .project-hero img {
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .project-preview-description {
