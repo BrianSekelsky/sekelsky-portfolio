@@ -50,7 +50,7 @@ html, body {
 }
 
 body {
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "ibm-plex-mono", sans-serif;
     font-weight: 400;
     font-style: normal;
     background-color: var(--bg);
@@ -131,8 +131,8 @@ h1 {
 }
 
 h2 {
-    font-size: 1.4rem;
-    font-family: "ibm-plex-mono", sans-serif;
+    font-size: 1.8rem;
+    font-family: "ibm-plex-mono", serif;
     font-weight: 800;
     font-style: normal;
 }
@@ -155,7 +155,7 @@ h3 {
 }
 
 h4 {
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "ibm-plex-mono", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     margin-top: 0;
@@ -163,7 +163,7 @@ h4 {
 }
 
 h5 {
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "ibm-plex-mono", sans-serif;
     margin: 0;
     padding-bottom: 40px;
     font-weight: 400;
@@ -172,17 +172,14 @@ h5 {
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
 }
 
-.project-preview-description h2 {
-    font-weight: 600;
-}
-
 small {
     font-size: 0.8rem;
     font-family: "ibm-plex-mono", sans-serif;
     /* font-family: "ibm-plex-sans", sans-serif; */
-    font-weight: 200;
+    font-weight: 400;
     text-transform: lowercase;
     font-style: italic;
+    opacity: 0.8;
 }
 
 .name {
@@ -237,7 +234,7 @@ small {
 }
 
 .nav-link {
-    font-family: "ibm-plex-sans", sans-serif;
+    font-family: "ibm-plex-mono", sans-serif;
     font-weight: 400;
     /* text-decoration: none; */
     padding-right: 20px;
@@ -257,10 +254,6 @@ small {
     padding-bottom: 20px;
 }
 
-.project-info h2 {
-    font-weight: 400;
-}
-
 .project-process {
     margin-top: 40px;
     border-top: var(--fg) solid 1px;
@@ -271,7 +264,6 @@ small {
     margin-top: 40px;
     border-top: var(--fg) solid 1px;
     padding-top: 10px;
-    font-family: "ibm-plex-sans", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
@@ -342,10 +334,10 @@ hr {
 }
 
 .project-preview-flex h2 {
-    margin-top: 0;
-    font-size: 1.4rem;
-}
-.project-preview-flex h4 {
+    margin-top: 10px;
+    font-family: "Editorial", serif;
+    font-weight: 100;
+    font-size: 2.2rem;
 }
 
 .project-preview img {
