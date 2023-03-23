@@ -23,26 +23,6 @@
     --secondary: #26C485;
     --thirdary: #F56476;
     --fourthary: #ED1C24;
-
-    --shadow-color: 198deg 27% 57%;
-    --shadow-elevation-low:
-      0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.69),
-      0.4px 0.7px 0.7px -2.2px hsl(var(--shadow-color) / 0.49),
-      1.1px 2.1px 2px -4.4px hsl(var(--shadow-color) / 0.29);
-    --shadow-elevation-medium:
-      0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.73),
-      0.5px 1.1px 1px -1.5px hsl(var(--shadow-color) / 0.57),
-      1.8px 3.7px 3.4px -3px hsl(var(--shadow-color) / 0.41),
-      5.3px 10.7px 9.9px -4.4px hsl(var(--shadow-color) / 0.25);
-    --shadow-elevation-high:
-      0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.68),
-      0.6px 1.2px 1.1px -0.6px hsl(var(--shadow-color) / 0.6),
-      1.4px 2.7px 2.5px -1.3px hsl(var(--shadow-color) / 0.53),
-      3px 6px 5.6px -1.9px hsl(var(--shadow-color) / 0.45),
-      6px 12.1px 11.2px -2.5px hsl(var(--shadow-color) / 0.38),
-      10.9px 21.9px 20.4px -3.2px hsl(var(--shadow-color) / 0.31),
-      18.2px 36.3px 33.8px -3.8px hsl(var(--shadow-color) / 0.23),
-      28.3px 56.5px 52.6px -4.4px hsl(var(--shadow-color) / 0.16);
 }
 
 html, body {
@@ -51,7 +31,7 @@ html, body {
 
 body {
     font-family: "ibm-plex-mono", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     background-color: var(--bg);
     color: var(--fg);
@@ -60,7 +40,7 @@ body {
 
 p {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -119,6 +99,7 @@ mark {
 
 .copyright {
     background-color: var(--bg);
+    font-family: "Editorial", serif;
 }
 
 h1 {
@@ -157,7 +138,7 @@ h3 {
 h4 {
     font-family: "ibm-plex-mono", sans-serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -166,7 +147,7 @@ h5 {
     font-family: "ibm-plex-mono", sans-serif;
     margin: 0;
     padding-bottom: 40px;
-    font-weight: 400;
+    font-weight: 300;
     text-align: left;
     font-size: 2rem;
     text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 6px var(--bg), 0 0 8px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg), 0 0 20px var(--bg), 0 0 24px var(--bg);
@@ -176,10 +157,9 @@ small {
     font-size: 0.8rem;
     font-family: "ibm-plex-mono", sans-serif;
     /* font-family: "ibm-plex-sans", sans-serif; */
-    font-weight: 400;
+    font-weight: 100;
     text-transform: lowercase;
     font-style: italic;
-    opacity: 0.8;
 }
 
 .name {
@@ -207,10 +187,18 @@ small {
 }
 
 .flexbox {
-    display: flex;
+    display: grid;
     justify-content: start;
     flex-direction: column;
     /* flex-wrap: wrap; */
+}
+
+.nav {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.footer {
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .row {
@@ -235,7 +223,7 @@ small {
 
 .nav-link {
     font-family: "ibm-plex-mono", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     /* text-decoration: none; */
     padding-right: 20px;
     padding-top: 20px;
@@ -266,6 +254,7 @@ small {
     padding-top: 10px;
     font-weight: 100;
     font-style: normal;
+    align-items: baseline;
 }
 
 .hr {
@@ -597,6 +586,14 @@ a:hover .speculative {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+    .nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .item-grid {
         display: grid;
         grid-row-gap: 100px;
@@ -627,7 +624,7 @@ a:hover .speculative {
     }
 
     .column {
-        width: 50vw;
+        /* width: 50vw; */
     }
 
     .client {
@@ -685,7 +682,7 @@ a:hover .speculative {
     
     .two-thirds {
         padding: 0px 50px;
-        /* width: 66%; */
+        width: 66%;
     }
 
     .nav-link {
