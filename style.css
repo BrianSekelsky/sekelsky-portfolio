@@ -154,12 +154,35 @@ h5 {
 }
 
 small {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-family: "ibm-plex-mono", sans-serif;
     /* font-family: "ibm-plex-sans", sans-serif; */
     font-weight: 100;
     text-transform: lowercase;
     font-style: italic;
+}
+
+.tag {
+    font-weight: 400;
+    /* background-color: #e3e3e3; */
+    /* color: var(--bg); */
+    border-radius: 10px;
+    border: 1px solid var(--fg);
+    padding: 4px 12px;
+    margin: 0 2px;
+    text-transform: uppercase;
+    font-style: normal;
+    transition: border 0.3 ease-in-out;
+}
+
+.tag:first-child {
+    margin-left: 0;
+}
+
+a:hover .tag {
+    /* background-color: var(--primary); */
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .name {
@@ -496,12 +519,12 @@ hr {
 
 .client {
     color: var(--thirdary);
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .speculative {
     color: var(--secondary);
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 
 a:hover .client {
@@ -702,6 +725,8 @@ a:hover .speculative {
         background-color: var(--bg);
         transform: translateY(2px);
         padding-bottom: 2px;
+        background-color: var(--fg);
+        color: var(--bg);
     }
 
     .special:hover {
