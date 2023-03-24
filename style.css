@@ -175,6 +175,20 @@ small {
     transition: border 0.3 ease-in-out;
 }
 
+.client {
+    color: var(--thirdary);
+    /* transition: all 0.3s ease-in-out; */
+    display: none;
+    border-color: var(--thirdary);
+}
+
+.speculative {
+    color: var(--secondary);
+    /* transition: all 0.3s ease-in-out; */
+    display: none;
+    border-color: var(--secondary);
+}
+
 .tag:first-child {
     margin-left: 0;
 }
@@ -515,16 +529,6 @@ hr {
 
 .special {
     display: none;
-}
-
-.client {
-    color: var(--thirdary);
-    /* transition: all 0.3s ease-in-out; */
-}
-
-.speculative {
-    color: var(--secondary);
-    /* transition: all 0.3s ease-in-out; */
 }
 
 a:hover .client {
