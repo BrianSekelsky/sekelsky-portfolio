@@ -1,8 +1,0 @@
-Model Information:
-* title:	Red oak acorn
-* source:	https://sketchfab.com/3d-models/red-oak-acorn-94bf085f6b5344afb18e45eb8fca5e85
-* author:	Digital Archive of Natural History (DiNArDa) (https://sketchfab.com/disc3d)
-
-Model License:
-* license type:	CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/)
-* requirements:	Credit is not mandatory. Commercial use is allowed.
