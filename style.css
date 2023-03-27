@@ -384,9 +384,9 @@ hr {
     /* border: 1px solid rgba(0,0,0,0); */
 }
 
-.project-hero:hover {
-    /* filter: blur(4px); */
-}
+/* a:hover .project-hero {
+    filter: blur(4px);
+} */
 
 .bordered {
     border: 1px solid var(--fg);
